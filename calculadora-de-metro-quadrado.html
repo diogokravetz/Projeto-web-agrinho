@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <title>calculadora de metro quadrado	
+</title>
+  <meta name="keywords"
+    content=" calculadora de metro quadrado,calculadora metro quadrado, calculadora metros quadrados , calculadora de metro , calculadora de metros quadrados">
+  <meta name="description"
+    content="resolva calculos de metros quadrados de maneira rapida e facil com nossa calculadora de metro quadrado ">
+  <meta name="author" content="Equations">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
+    <link href="assets/css/dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/site.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
+    
+  
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+  
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4  ">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Equations</a>
+       
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item active">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+
+          </ul>
+        </div>
+        <form class="d-flex">
+          <script>
+            var href;
+            function myfunction(){
+            $('form').on('submit', function(e) {
+              e.preventDefault();
+              href = $('datalist option[value="' +$('input[list="categorias"]').val()+ '"]').find('a').prop('href');
+              if(typeof href !== 'undefined')
+                window.location.href = href;
+              });
+            }
+            </script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+             
+     <input list="categorias" type="text" class="form-control me-2" oninput="myfunction()" placeholder="Search" >
+     <datalist id="categorias">
+
+     
+      <option value="home"><a href="index.html"></a></option>
+      <option value="calculadora de expressões"><a href="calculadora.html"></a></option>
+      <option value="calculadora cientifica"><a href="calculadoracientifica.html"></a></option>
+      <option value="conversor"><a href="conversor.html"></a></option>
+      
+      </datalist>
+      
+      
+        <button class="btn btn-outline-success" value="Procurar" id="categorias" type="submit">Search</button>
+         </form>        </div>
+      </div>
+    </nav>   
+      
+      
+      <link rel='stylesheet' href='posts1.css' type='text/css' media='all' />
+      <link rel='stylesheet' href='post2.css' type='text/css' media='all' />
+      
+      </style>
+      </head>
+      
+      <div class="wrap">
+        
+      <article class="blglst">
+        <h2>
+            <div class="heade">Calculadora de metros quadrados</div>
+          </h2>
+          
+          <br>
+  
+
+    <input type="text" placeholder="digite a base " class="global" name="nome" id="base">
+      <input type="text" placeholder="digite a altura" class="global" name="nome1" id="altura">
+    
+    <input type="button" value="calcular" style="padding: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 3px;
+    float: left;
+    width:50%;
+    height:10 ;
+    margin: 0 2px;
+    /*border: 1px solid #000;*/
+    background-color: #81C784;" onclick="calcular(); " >
+   <br>
+   <br>
+   <br>
+   <input  type="text" class="result" value="resultado" name="ola" id="calc">
+    <script> function calcular() {
+        var base = document.getElementById('base').value;
+        var expoente = document.getElementById('altura').value;
+        var msg = base * expoente + ' metros quadrados ' ;
+        document.getElementById('calc').value = msg;
+   }
+   
+    </script>
+    <p><h1>Calculadora de metro quadrado .</h1></p>
+    <p><big>Você pode usar nossa calculadora de metro quadrado , para calcular qualquer coisa que envolva metro quadrado , por exemplo : calcular quantos metros quadrados precisamos para encher uma parede de tijolos , ou quantos metros quadrados de cerâmica precisamos para encher um piso .</big></p>    
+</body>
+</html>

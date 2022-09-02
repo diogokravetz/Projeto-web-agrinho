@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Conversor de graus celsius para fahrenheit , graus celsius para kelvin …
+</title>
+  <meta name="keywords"
+    content=" graus celsius para fahrenheit , graus celsius para kelvin , Equations,converter,conversor,converter,Graus,graus,graus Céucios em kelvim, fahrenheit em celsius, Céucios em fahrenheit,celsius,fahrenheit,kelvim,celsiu ">
+  <meta name="description"
+    content="Converta graus celsius em fahrenheit , graus fahrenheit em kelvin ...">
+  <meta name="author" content="Equations">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+  <!-- Custom styles for this template -->
+  <link href="assets/css/dashboard.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+ 
+</head>
+
+<body onload="ExibeTexto();">
+
+  <script>
+    function Digitar(valorParametro) {
+      var elemento = document.getElementById("id_formula");
+      var valorAtual = elemento.value;
+      elemento.value = valorAtual + valorParametro;
+      Calcular_expressao();
+    }
+    function Calcular_expressao() {
+      var elemento = document.getElementById("id_formula");
+      var valorAtual = elemento.value;
+      var cal = eval(valorAtual);
+      var resultado = document.getElementById("resultado");
+      resultado.value = cal;
+    }
+
+
+    function Deletar_expressao() {
+      var elemento = document.getElementById("id_formula");
+      var resultado = document.getElementById("resultado");
+      elemento.value = "";
+      resultado.value = "";
+    }
+
+  </script>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4  ">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Equations</a>
+       
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item active">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+
+          </ul>
+        </div>
+        <form class="d-flex">
+          <script>
+            var href;
+            function myfunction(){
+            $('form').on('submit', function(e) {
+              e.preventDefault();
+              href = $('datalist option[value="' +$('input[list="categorias"]').val()+ '"]').find('a').prop('href');
+              if(typeof href !== 'undefined')
+                window.location.href = href;
+              });
+            }
+            </script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+             
+     <input list="categorias" type="text" class="form-control me-2" oninput="myfunction()" placeholder="Search" >
+     <datalist id="categorias">
+
+     
+      <option value="home"><a href="index.html"></a></option>
+      <option value="calculadora de expressões"><a href="calculadora.html"></a></option>
+      <option value="calculadora cientifica"><a href="calculadoracientifica.html"></a></option>
+      <option value="conversor"><a href="conversor.html"></a></option>
+      
+      </datalist>
+      
+      
+        <button class="btn btn-outline-success" value="Procurar" id="categorias" type="submit">Search</button>
+         </form>        </div>
+      </div>
+    </nav>   
+
+<style>
+  *,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ 
+.menu {
+  background: #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  cursor: pointer;
+  box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
+  transition: box-shadow 1.1s cubic-bezier(0.19, 1, 0.22, 1);
+
+}
+input {
+        display: none;
+    }
+
+    input:checked ~ label .menu {
+        box-shadow: 0 0 0 130vw #FFF, 0 0 0 130vh #FFF;
+    }
+
+    input:checked ~ label .hamburger {
+        transform: rotate(45deg);
+    }
+
+    input:checked ~ label .hamburger:after {
+        transform: rotate(90deg);
+        bottom: 0;
+    }
+
+    input:checked ~ label .hamburger:before {
+        transform: rotate(90deg);
+        top: 0;
+    }
+
+    input:checked ~ ul {
+        opacity: 1;
+        visibility: visible;
+    }
+    .menu:hover {
+        box-shadow: 0 0 0 8px #FFF, 0 0 0 8px #FFF;
+    }
+
+    .hamburger {
+        position: relative;
+        top: 29px;
+        left: 15px;
+        width: 30px;
+        height: 2px;
+        background: #000;
+        display: block;
+        transform-origin: center;
+        transition: .5s ease-in-out;
+    }
+
+    .hamburger:after,
+    .hamburger:before {
+        background: #000;
+        content: "";
+        display: block;
+        transition: .5s ease-in-out;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .hamburger:before {
+        top: -10px;
+    }
+
+    .hamburger:after {
+        bottom: -10px;
+    }
+    ul {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        list-style: none;
+        font-size: 45px;
+        opacity: 0;
+        transition: .25s .1s cubic-bezier(0, 1.07, 0, 1.02);
+        visibility: hidden;
+        z-index: 2;
+    }
+
+.hamburguer {
+  position: relative;
+  display: block;
+  background: #000;
+  width: 30px;
+  height: 2px;
+  top: 29px;
+  left: 15px;
+  transition: 0.5s ease-in-out;
+}
+
+.hamburguer:before,
+.hamburguer:after {
+  background: #000;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: 0.5s ease-in-out;
+}
+
+.hamburguer:before {
+  top: -10px;
+}
+
+.hamburguer:after {
+  bottom: -10px;
+}
+
+input {
+  display: none;
+}
+
+input:checked ~ label .hamburguer {
+  transform: rotate(45deg);
+}
+
+input:checked ~ label .hamburguer:before {
+  transform: rotate(90deg);
+  top: 0;
+}
+
+input:checked ~ label .hamburguer:after {
+  transform: rotate(90deg);
+  bottom: 0;
+}
+#ss {
+  position: fixed;
+  background-color:white ;
+  font-size:24px;
+  padding:0px;
+    margin:0px;
+   list-style:none;
+}
+</style>
+<input id="menu-hamburguer" type="checkbox" />
+
+<label for="menu-hamburguer">
+  <div class="menu">
+    <span class="hamburguer"></span>
+  </div>
+</label>
+
+<ul id="ss" >
+
+  <li><a href="index.html">Home</a></li>
+  <li><a href="calculadora.html">Calculadora de expressão numérica
+    <a></li>
+
+  <li><a href="calculadoracientifica.html">calculadora cientifica</a></li
+    >
+
+
+</ul>
+
+<link rel='stylesheet' href='posts1.css' type='text/css' media='all' />
+<link rel='stylesheet' href='post2.css' type='text/css' media='all' />
+
+</style>
+</head>
+
+<div class="wrap">
+  
+<article class="blglst">
+              <h2>
+                <div class="header">conversor de graus</div>
+              </h2>
+              <div class="form-row">
+                <div class="row">
+                  <select onchange="ExibeTexto();" id="ddltipoConversor" name="ddltipoConversor"
+                    class="form-  control form-control-lg">
+                    <option value="temperatura" selected>Temperatura</option>
+                    <!-- <option value="comprimento">Comprimento</option> -->
+                  </select>
+                </div>
+                <div id="divformtemperatura">
+                  <div class="row mb-3">
+                    <div class="col-6 themed-grid-col">
+                      <div class="row">
+                        <input type="number" class="form-control form-control-lg" name="txtTemperaturaDe" value="0"
+                          maxlength="200" required="" id="txtTemperaturaDe" oninput="CalculaTemperatura();">
+                      </div>
+                      <div class="row">
+                        <input type="number" class="form-control form-control-lg" name="txtTemperaturaPara" value="32"
+                          maxlength="200" required="" id="txtTemperaturaPara" oninput="CalculaTemperatura();">
+                      </div>
+                    </div>
+                    <div class="col-6 themed-grid-col">
+                      <div class="row">
+                        <select onchange="CalculaTemperatura();" id="ddltemperaturaDe" name="ddltemperaturaDe"
+                          class="form-control form-control-lg">
+                          <option value="celsius" selected>Graus Celsius</option>
+                          <option value="fahrenheit">Grau Fahrenheit</option>
+                          <option value="kelvin">Kelvin</option>
+                        </select>
+                      </div>
+                      <div class="row">
+                        <select onchange="CalculaTemperatura();" id="ddltemperaturaPara" name="ddltemperaturaPara"
+                          class="form-control form-control-lg">
+                          <option value="celsius">Graus Celsius</option>
+                          <option value="fahrenheit" selected>Grau Fahrenheit</option>
+                          <option value="kelvin">Kelvin</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="divformcomprimento">
+                  <div class="row mb-3">
+                    <div class="col-6 themed-grid-col">
+                      <div class="row">
+                        <input type="number" class="form-control form-control-lg" name="txtTemperaturaDe" value="1"
+                          maxlength="200" required="" id="txtComprimentoDe" oninput="CalculaComprimento();">
+                      </div>
+                      <div class="row">
+                        <input type="number" class="form-control form-control-lg" name="txtTemperaturaPara" value="100"
+                          maxlength="200" required="" id="txtComprimentoPara" oninput="CalculaTemperatura();">
+                      </div>
+                    </div>
+                    <div class="col-6 themed-grid-col">
+                      <div class="row">
+                        <select onchange="CalculaComprimento();" id="ddlComprimentoDe" name="ddlComprimentoDe"
+                          class="form-control form-control-lg">
+                          <option value="quilometro">Quilômetro</option>
+                          <option value="metro" selected>Metro</option>
+                          <option value="centímetro">Centímetro</option>
+                          <option value="milímetro">Milímetro</option>
+                          <option value="micrometro">Micrômetro</option>
+                          <option value="nanometro">Nanômetro</option>
+                          <option value="milha">Milha</option>
+                          <option value="jarda">Jarda</option>
+                          <option value="pe">Pé</option>
+                          <option value="polegada">Polegada</option>
+                          <option value="milhanautica">Milha náutica</option>
+                        </select>
+                      </div>
+                      <div class="row">
+                        <select onchange="CalculaComprimento();" id="ddlComprimentoPara" name="ddlComprimentoPara"
+                          class="form-control form-control-lg">
+                          <option value="quilometro">Quilômetro</option>
+                          <option value="metro">Metro</option>
+                          <option value="centímetro" selected>Centímetro</option>
+                          <option value="milímetro">Milímetro</option>
+                          <option value="micrometro">Micrômetro</option>
+                          <option value="nanometro">Nanômetro</option>
+                          <option value="milha">Milha</option>
+                          <option value="jarda">Jarda</option>
+                          <option value="pe">Pé</option>
+                          <option value="polegada">Polegada</option>
+                          <option value="milhanautica">Milha náutica</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </form>
+          </div>
+
+          <div class="row">
+            <div class="row" id="divTemperatura">
+        <p><h1>
+Conversor de graus celsius para fahrenheit , graus celsius para kelvin …
+</p></h1>
+<p><big>
+Com nosso conversor de graus você pode converter : graus celsius para fahrenheit , graus celsius para kelvin , graus kelvin para fahrenheit , graus kelvin para celsius , graus fahrenheit para kelvin e graus fahrenheit para celsius .
+</p></big>
+<h2>Celsius</h2>
+<p><big>   A escala celsius ou graus celsius é utilizada em quase todos os países no mundo ele normalmente é representado por oC ,   você já deve ter ouvido falar dos graus centígrados e até hoje há muita confusão sobre as diferenças  do grau centígrado , e do graus celsius , a verdade é que o grau celsius era o antigo grau centígrado acontece é que o nome foi mudado de graus celsius para centígrado para evitar confusão com a parte centésima de um grau , com o nosso conversor você pode converter graus celsius para fahrenheit e graus celsius para kelvin. </big></p>
+<h2>Fahrenheit</h2>
+ <p><big>O grau fahrenheit é uma escala de temperatura muito usada também , mas ela se limita aos países Estados Unidos , e Libéria enquanto os graus celsius são a temperatura digamos oficial de diversos países no mundo , a temperatura do congelamento de água é de 32 graus fahrenheit o símbolo para fahrenheit é (°f) ,  com o nosso conversor você pode converter graus fahrenheit para celsius e celsius para graus fahrenheit . </big>
+                <br;>
+
+ <big> ,    1 °F é igual a  0,556 °C</big></p>
+ <h2>
+ Kelvin
+ </h2>
+ <p><big>  Graus kelvin , os graus kelvin são extremamente famosos principalmente na física pelo seu zero absoluto , ou seja 0 kelvin , 0 kelvin é a temperatura mais fria do mundo , tudo que está em temperatura de 0 kelvin não tem energia térmica , o kelvin é simbolizado pela letra ( k ) , ele também é a unidade base do si ( sistema internacional de unidades ) para temperatura termodinâmica , com nosso conversor de graus você pode converter graus kelvin para celsius e graus kelvin para fahrenheit .
+</big></p>
+ <p><h2>
+Qual é a fórmula para converter graus celsius para fahrenheit
+</p></h2>
+<p><big>
+Para converter graus celsius para fahrenheit você pode usar esta fórmula que é : ( °C × 9 / 5) + 32 = °F , ou seja para converter graus celsius em fahrenheit , você deve multiplicar o graus celsius por 9 / 5 , e depois somar mais 32 , que você terá a resposta da transformação de graus celsius para Fahrenheit .
+</p></big>
+<p><h2>
+
+</p> Qual a fórmula para converter graus celsius para kelvin </h2>
+<p><big> Para podermos converter graus celsius para kelvin ,  usamos a seguinte fórmula : °C + 273 ,15 = K , essa é uma das fórmulas mais fáceis pois é só somar os grau celsius + 273 , 15 . Pronto aí teremos a nossa transformação de graus celsius para kelvin .
+</p></big>
+<p><h2>
+
+</p> Qual é a fórmula para converter graus fahrenheit em graus kelvin . </h2>
+<p><big> Sempre preste atenção que nas fórmulas os graus são representados por símbolos , esses símbolos são representados pela primeira letra do nome dos graus , os graus fahrenheit são representados por °F , os graus kelvin são representados por  K , e os graus celsius são representados por °C , e o / nas fórmulas indicam divisão ou uma fração , uma fração é a mesma coisa que uma divisão , sim uma fração é uma divisão  .</big></p>
+<p><big>
+Para converter graus fahrenheit em graus kelvin , a fórmula é um pouco mais complexa :
+( °F − 32 ) × 5 / 9 + 273 ,15 = K , ou seja , fazemos o grau fahrenheit - 32 depois disso multiplicamos por 5 / 9 e somamos com 273,15 .
+</p></big>
+<p><h2>
+Como converter graus fahrenheit para celsius .
+</p></h2>
+<p><big>
+Para converter graus fahrenheit para celsius ,  usamos a seguinte fórmula
+( °F − 32 ) × 5 / 9 = °C , esta é a mesma fórmula que para converter fahrenheit em kelvin , a única diferença é que não somamos com 273,15 .
+</p></big>
+<p><h2>
+
+</p> como converter graus kelvin para graus celsius . </h2>
+<p><big>
+Agora vamos ver como converter graus kelvin para graus celsius , é muito fácil veja : K − 273 ,15 = °C , todas essas fórmulas estão todas interligadas , porque para converter graus celsius para kelvin apenas temos que somar 273,15 , como somar é o contrário de subtrair , para converter kelvin para graus celsius , como a subtração é o contrário da adição vamos subtrair 273, 15 dos graus kelvin . 
+</p></big>
+<p><h2>
+Como converter graus kelvin para graus fahrenheit .
+</p></h2>
+<p><big>
+Agora vamos converter graus kelvin para graus fahrenheit essa é a fórmula :
+( K − 273 ,15) × 9 / 5 + 32 = °F , primeiramente vamos transformar graus kelvin para graus celsius subtraindo os graus kelvin por 273,15 , depois de fazer isso , vamos multiplicar por 9 / 5 e somar isso com 32 .
+</p></big>
+<p><big>
+Pronto agora você já sabe como converter : graus celsius para fahrenheit , como converter graus celsius para kelvin , como converter graus kelvin para fahrenheit , como converter graus fahrenheit para kelvin , como converter graus fahrenheit para celsius e como converter graus kelvin para celsius , você pode perceber que todas as fórmulas são parecidas , e  não são parecidas à toa por que na maioria uma são o contrário da outra , vamos dar um exemplo :  para converter graus kelvin em celsius e graus celsius em kelvin apenas trocamos o sinal de adição pelo sinal de subtração viu como é simples  .
+</p></big>
+
+
+
+
+
+
+
+
+            </div>
+
+            <!-- <div class="row" id="divComprimento">
+              <h2>Metros</h2>
+              
+              </p>
+            </div> -->
+
+          </div>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    function ExibeTexto() {
+
+      var ddltipoConversor = document.getElementById("ddltipoConversor");
+      var valorddltipoConversor = ddltipoConversor.value;
+
+      if (valorddltipoConversor === "temperatura") {
+        $("#divTemperatura").show();
+        $("#divComprimento").hide();
+        $("#divformtemperatura").show();
+        $("#divformcomprimento").hide();
+      } else {
+        $("#divTemperatura").hide();
+        $("#divComprimento").show();
+        $("#divformtemperatura").hide();
+        $("#divformcomprimento").show();
+      }
+
+    };
+
+  </script>
+  <!--regra para calcular a temperatura-->
+  <script>
+    function CalculaTemperatura() {
+      var txtTemperaturaDe = document.getElementById("txtTemperaturaDe");
+      var valortxtTemperaturaDe = txtTemperaturaDe.value;
+
+      var txtTemperaturaPara = document.getElementById("txtTemperaturaPara");
+      var valortxtTemperaturaPara = txtTemperaturaPara.value;
+
+      console.log(valortxtTemperaturaDe);
+      console.log(valortxtTemperaturaPara);
+
+      var ddltemperaturaDe = document.getElementById("ddltemperaturaDe");
+      var valorddltemperaturaDe = ddltemperaturaDe.value;
+
+      var ddltemperaturaPara = document.getElementById("ddltemperaturaPara");
+      var valorddltemperaturaPara = ddltemperaturaPara.value;
+
+      console.log(valorddltemperaturaDe);
+      console.log(valorddltemperaturaPara);
+
+      if (valorddltemperaturaDe === "celsius" && valorddltemperaturaPara === "fahrenheit") {
+        var calculo = ((valortxtTemperaturaDe * 9 / 5)) + 32;
+        txtTemperaturaPara.value = calculo;
+      } else if (valorddltemperaturaDe === "fahrenheit" && valorddltemperaturaPara === "celsius") {
+        var calculo = ((valortxtTemperaturaDe - 32) * 5 / 9);
+        txtTemperaturaPara.value = calculo;
+      } else if (valorddltemperaturaDe === "celsius" && valorddltemperaturaPara === "kelvin") {
+        var calculo = ((parseFloat(valortxtTemperaturaDe) + 273.15));
+        txtTemperaturaPara.value = calculo;
+      } else if (valorddltemperaturaDe === "fahrenheit" && valorddltemperaturaPara === "kelvin") {
+        var calculo = (((parseFloat(valortxtTemperaturaDe) - 32)) * 5 / 9 + 273.15);
+        txtTemperaturaPara.value = calculo;
+      } else if (valorddltemperaturaDe === "kelvin" && valorddltemperaturaPara === "celsius") {
+        var calculo = (parseFloat(valortxtTemperaturaDe) - 273.15);
+        txtTemperaturaPara.value = calculo;
+      } else if (valorddltemperaturaDe === "kelvin" && valorddltemperaturaPara === "fahrenheit") {
+        var calculo = ((parseFloat(valortxtTemperaturaDe) - 273.15) * 9 / 5 + 32);
+        txtTemperaturaPara.value = calculo;
+      }
+    };
+
+  </script>
+  <!--regra para calcular a comprimento-->
+  <script>
+    function CalculaComprimento() {
+      var txtComprimentoDe = document.getElementById("txtComprimentoDe");
+      var valortxtComprimentoDe = txtComprimentoDe.value;
+
+      var txtComprimentoPara = document.getElementById("txtComprimentoPara");
+      var valortxtComprimentoPara = txtComprimentoPara.value;
+
+      console.log(valortxtComprimentoDe);
+      console.log(valortxtComprimentoPara);
+
+      var ddlComprimentoDe = document.getElementById("ddlComprimentoDe");
+      var valorddlComprimentoDe = ddlComprimentoDe.value;
+
+      var ddlComprimentoPara = document.getElementById("ddlComprimentoPara");
+      var valorddlComprimentoPara = ddlComprimentoPara.value;
+
+      console.log(valorddlComprimentoDe);
+      console.log(valorddlComprimentoPara);
+
+      
+      const expr = valorddlComprimentoDe + "_" + valorddlComprimentoPara;
+
+      switch (expr) {
+        case "quilometro_metro":
+          var calculo = ((parseFloat(valortxtComprimentoDe) * 1000));
+          txtComprimentoPara.value = calculo;
+          break;
+        case "quilometro_centímetro":
+          var calculo = ((parseFloat(valortxtComprimentoDe) * 100000));
+          txtComprimentoPara.value = calculo;
+          break;
+        case "quilometro_milímetro":
+          
+          break;
+        case "quilometro_micrometro":
+
+          break;
+        case "quilometro_nanometro":
+
+          break;
+        case "quilometro_milha":
+          var calculo = ((parseFloat(valortxtComprimentoDe) / 1609));
+          txtComprimentoPara.value = calculo;
+          break;
+        case "quilometro_jarda":
+          var calculo = ((parseFloat(valortxtComprimentoDe) * 1094));
+          txtComprimentoPara.value = calculo;
+          break;
+        case "quilometro_pe":
+          var calculo = ((parseFloat(valortxtComprimentoDe) * 3281));
+          txtComprimentoPara.value = calculo;
+          break;
+        case "quilometro_polegada":
+          var calculo = ((parseFloat(valortxtComprimentoDe) * 39370));
+          txtComprimentoPara.value = calculo;
+          break;
+        case "quilometro_milhanautica":
+          var calculo = ((parseFloat(valortxtComprimentoDe) * 1852));
+          txtComprimentoPara.value = calculo;
+          break;
+        default:
+          break;
+      }
+
+
+
+    };
+
+  </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
+    integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
+    integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha"
+    crossorigin="anonymous"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Calculadora de expressão numérica
+</title>
+  <meta name="keywords"
+    content="    Calculadora de expressão numérica     ,Calculadora de expressões ,calculadora de expressões numéricas ,  Calculadora, Expressão, Resolução, ,math,calcule,calcular,exp,expesao,expresao,numéricas,como calcular expressões numéricas , como calcular expressões numérica de forma facíl ,calculadora de expressões numérica  ,calculator,calccular expressões ,como calcular expressões numéricas ?">
+  <meta name="description"
+  content=" resolve expressões numéricas de maneira rápida e fácil com nossa calculadora de expressões numéricas ">
+  <meta name="author" content="Equations">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
+  
+
+  <!-- Bootstrap core CSS -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+  <!-- Custom styles for this template -->
+  <link href="assets/css/dashboard.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+
+</head>
+
+<body>
+
+  <script>
+    function Digitar(valorParametro) {
+      var elemento = document.getElementById("id_formula");
+      var valorAtual = elemento.value;
+      elemento.value = valorAtual + valorParametro;
+      Calcular_expressao();
+    }
+    function Calcular_expressao() {
+      var elemento = document.getElementById("id_formula");
+      var valorAtual = elemento.value;
+      var cal = eval(valorAtual);
+      var resultado = document.getElementById("resultado");
+      resultado.value = cal;
+    }
+
+
+    function Deletar_expressao() {
+      var elemento = document.getElementById("id_formula");
+      var resultado = document.getElementById("resultado");
+      elemento.value = "";
+      resultado.value = "";
+    }
+
+  </script>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4  ">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Equations</a>
+       
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item active">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+
+          </ul>
+        </div>
+        <form class="d-flex">
+          <script>
+            var href;
+            function myfunction(){
+            $('form').on('submit', function(e) {
+              e.preventDefault();
+              href = $('datalist option[value="' +$('input[list="categorias"]').val()+ '"]').find('a').prop('href');
+              if(typeof href !== 'undefined')
+                window.location.href = href;
+              });
+            }
+            </script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+             
+     <input list="categorias" type="text" class="form-control me-2" oninput="myfunction()" placeholder="Search" >
+     <datalist id="categorias">
+
+     
+      <option value="home"><a href="index.html"></a></option>
+      <option value="calculadora de expressões"><a href="calculadora.html"></a></option>
+      <option value="calculadora cientifica"><a href="calculadoracientifica.html"></a></option>
+      <option value="conversor"><a href="conversor.html"></a></option>
+      
+      </datalist>
+      
+      
+        <button class="btn btn-outline-success" value="Procurar" id="categorias" type="submit">Search</button>
+         </form>        </div>
+      </div>
+    </nav>   
+      
+          </nav>
+<link rel='stylesheet' href='posts1.css' type='text/css' media='all' />
+<link rel='stylesheet' href='post2.css' type='text/css' media='all' />
+
+</style>
+</head>
+
+<div class="wrap">
+  
+<article class="blglst">
+            <form method="POST" class="post-form">
+              <h2>
+                <div class="header">Calculadora de expressão numérica </div>
+              </h2>
+              <label>Expressão informada = </label>
+              <input type="text" class="result" name="formula" value="" maxlength="200" required="" id="id_formula">
+              <label>Resultado = </label>
+              <input type="text" class="result" name="resultado" value="" maxlength="200" required="" id="resultado">
+              <!-- gambiarra na proxima linha -->
+              <p style="color: white;">-</p>
+              <div class="first-row">
+                <input type="button" name="" onclick="Digitar(this.value);" value="7" class="global">
+                <input type="button" name="" onclick="Digitar(this.value);" value="8" class="global">
+                <input type="button" name="" onclick="Digitar(this.value);" value="9" class="global">
+                <input type="button" name="" onclick="Digitar(this.value);" value="/" text="%" class="global">
+              </div>
+              <div class="second-row">
+                <input type="button" name="" onclick="Digitar(this.value);" value="4" class="global">
+                <input type="button" name="" onclick="Digitar(this.value);" value="5" class="global">
+                <input type="button" name="" onclick="Digitar(this.value);" value="6" class="global">
+                <input type="button" name="" onclick="Digitar(this.value);" value="*" class="global">
+              </div>
+              <div class="third-row">
+                <input type="button" name="" onclick="Digitar(this.value);" value="1" class="global">
+                <input type="button" name="" onclick="Digitar(this.value);" value="2" class="global">
+                <input type="button" name="" onclick="Digitar(this.value);" value="3" class="global">
+                <input type="button" name="" onclick="Digitar(this.value);" value="-" class="global">
+              </div>
+              <div class="fourth-row">
+                <input type="button" name="" onclick="Digitar(this.value);" value="0" class="global">
+                <input type="button" name="" onclick="Digitar(this.value);" value="(" class="global">
+                <input type="button" name="" onclick="Digitar(this.value);" value=")" class="global">
+                <input type="button" name="" onclick="Digitar(this.value);" value="+" class="global">
+              </div>   
+                    
+              <div class="fourth-row">
+                <input type="button" name="" onclick="Digitar(this.value);" value="[" class="global">
+                <input type="button" name="" onclick="Digitar(this.value);" value="]" class="global">
+                <input type="button" name="" onclick="Deletar_expressao();" value="Del"
+                class="red global">
+                <input type="button" name="" onclick="Calcular_expressao();" value="Calcular"
+                class="green global">
+              </div> 
+          </form>
+        </div>
+        <link rel='stylesheet' href='posts1.css' type='text/css' media='all' />
+        <link rel='stylesheet' href='post2.css' type='text/css' media='all' />
+        
+        </style>
+        </head>
+        
+        <div class="wrap">
+          
+        <article class="blglst">
+        
+
+    
+
+          <p><h1>Calculadora de expressão numérica .</h1></p>
+          <p><big>Você pode usar nossa <strong> calculadora de expressão numérica </strong> , para resolver qualquer tipo de expressão numérica, é só digitar a expressão e apertar calcular :) </big></p>
+          <p><h2>O que são expressões numéricas ?
+          </h2></p>
+          <p><big>
+          As expressões numéricas são um conteúdo que começa a cair desde o 6º ano do ensino fundamental , e esse conteúdo começa cair quando a matemática começa a ficar um pouco mais difícil , muitas vezes confundindo sua cabeça, mas fique tranquilo que essa sensação de matemática um pouco mais difícil logo vai passar , você precisa aprender expressões numéricas , porque as expressões numéricas são cálculos muito fáceis pois estão na matemática básica , além de serem cálculos extremamente importantes , porque tudo que você estuda depois , tem alguma base em expressões numéricas por exemplo , as expressões de primeiro grau que você vai estudar no sétimo ano do ensino fundamental , elas são baseadas nas expressões numéricas então se você não souber expressões numéricas vai ficar muito difícil aprender o que vem depois na matemática .
+          </big></p>
+          <p><big>
+          Basicamente, expressões numéricas são uma ,  duas ou mais operações matemáticas todas agrupadas formando uma só sentença matemática , você aprendendo a calcular uma expressão numérica , vai ter mais facilidades nos outros cálculos e exercícios pois expressões numéricas servem para facilitar os cálculos .
+          </big></p>
+          <p><h2>
+          Como calcular uma expressão numérica na teoria ?
+          </h2></p>
+          <p><big>
+          Para calcular uma expressão numérica na teoria , você precisa entender que nas expressões numéricas nós seguimos uma ordem para resolvê las , então precisamos resolver primeiro as ordens elementares na ordem que vamos mostrar a seguir , e depois as operações na ordem que vamos mostrar a seguir , se você seguir esta ordem não vai ter nenhum problema em resolver uma expressão numérica :
+          </big></p>
+          <p><h2>
+          Parênteses :
+          </h2></p>
+          <p><big>
+          Os parênteses são as primeiras ordens elementares , então você vai primeiro resolver os cálculos que residem dentro dos parênteses , e abaixar a sua expressão numérica do jeito que ela estava antes mas agora sem os parênteses e com o que estava dentro dos parênteses resolvidos .
+          </big></p>
+          <p><h2>
+          Colchetes :
+          </h2></p>
+          <p><big>
+          Depois de resolver o que estava dentro dos parênteses em uma expressão numérica , resolvendo uma segunda ordem elementar que são os colchetes de forma fácil da mesma forma que resolvemos o que estava dentro dos parênteses resolvemos o que está dentro dos colchetes , eliminamos os colchetes e abaixamos nossa expressão numérica com o que estava dentro dos colchetes resolvidos .
+          </big></p>
+          <p><h2>
+          Chaves :
+          </h2></p>
+          <p><big>
+          Agora na nossa terceira ordem elementar resolvemos o que está dentro das chaves , eliminamos as chaves e abaixamos nossa expressão numérica com o que estava dentro das chaves resolvido .
+          </big></p>
+          <p><h2>
+          Raiz e potência .
+          </p></h2>
+          <p><big>
+          Depois de resolver todas as ordens elementares , se tiver resolvemos as raízes e as potências de dentro das nossas expressões numéricas , como resolvemos o que estava dentro das ordens elementares agora resolvemos as potências e as raízes e abaixamos a expressão numérica novamente .
+          </p></big>
+          <p><h2>
+          Multiplicação e divisão .
+          </h2></p>
+          <p><big>
+          Resolvemos agora a nossa quinta ordem em nossas expressões numéricas resolvemos aos cálculos de multiplicação e divisão , Se você quiser ser um pouco mais informal resolvemos os cálculos de vezes e dividir , depois disso como já deve imaginar abaixamos nossa expressão numérica novamente , você pode resolver a multiplicação primeiro , ou divisão primeiro , ou as duas juntas se preferir , a ordem entre a multiplicação e a  divisão  é você quem escolhe .
+          </big></p>
+          <p><h2>
+          Adição e subtração :
+          </h2></p>
+          <p><big>
+          Bom , agora já estamos no final da nossa expressão numérica resolvemos as contas de adição e subtração você escolhe se quer resolver adição ou subtração primeiro , mas depois de resolver adição e a subtração você vai ter o resultado da sua expressão numérica ,  agora você sabe a teoria de como resolver expressões numéricas .
+          </big></p>
+          <p><big>
+          Pode ser que na teoria isso tudo tenha parecido um pouco difícil para você , mas fique tranquilo que quando você vai aprender alguma coisa nova  , pode soar um pouco difícil no começo mas logo depois quando partimos para a prática isso tudo vai ficar muito mais fácil pois compreendendo a teoria a prática vai ficar muito fácil , e aplicando na prática a teoria também vai ficar mais fácil de entender .
+          </big></p>
+          <p><h2>
+          Como resolver expressões numéricas na prática ?
+          </h2></p>
+          <p><big>
+          Depois de tanta teoria vamos entender como resolver expressões numéricas na prática sem usar a calculadora de expressão numérica , para resolver expressões numéricas na prática vamos começar a usar um exemplo prático de como resolver uma expressão numérica , vamos ir mostrando e acompanhando a resolução da expressão depois se tiver alguma dúvida em relação a resposta e a  resolução da expressão você pode usar nossa calculadora de expressão numérica para ver se o resultado e a resolução estão corretos vamos lá :</big></p>
+          <p><big>
+          4 + ( 2 x 2 ) x [ 22 x 2 ] - { 7 + 5 }
+          </big></p>
+          <p><big>
+          Como já dissemos anteriormente, resolvemos primeiramente o que está dentro dos parênteses ou a primeira ordem elementar , resolvemos o que está dentro dos parênteses e abaixamos nossa expressão numérica .
+          </big></p>
+          <p><big>
+          4+ ( 2 x 2 ) X [ 22 X 2 ] - { 7 + 5 }
+          </big></p>
+          <p><big>
+          4 + 4 X [ 22 X 2 ] - { 7 + 5 }
+          </big></p>
+          <p><big>
+          Já resolvidos os cálculos de dentro dos parênteses resolvemos a segunda ordem elementar ou seja resolvemos colchetes  [ ] , depois de resolver o que está dentro dos colchetes abaixamos  nossa expressão numérica .
+          </big></p>
+          <p><big>
+          vamos lá :
+          </big></p>
+          <p><big>
+          4 + 4 x [ 22 x 2 ] - { 7 + 5 }
+          </big></p>
+          <p><big>
+          4 + 4 x 44 - { 7 + 5 }
+          </big></p>
+          <p><big>
+          Depois como já foi dito na teoria resolvemos a nossa terceira ordem elementar ou seja resolvemos o que está dentro das chaves {  } e abaixamos  nossa expressão numérica .
+          </big></p>
+          <p><big>
+          4 + 4 x 44 - { 7 + 5 }
+          </big></p>
+          <p><big>
+          4 + 4 x 44 - 12
+          </big></p>
+          <p><big>
+          Depois disso resolvemos as potências e as raízes ou seja nossa quarta ordem como nós não temos as potências e nem as raízes , nessa expressão numérica partimos direto para resolver a multiplicação e a divisão na expressão numérica .
+          </big></p>
+          <p><big>
+          Agora resolvemos a multiplicação e a divisão , como nós só temos a multiplicação resolvemos só a multiplicação e abaixamos a expressão numérica novamente .
+          </big></p>
+          <p><big>
+          Vamos lá :
+          </big></p>
+          <p><big>
+          4 + 4 x 44 - 12
+          </big></p>
+          <p><big>
+          Vamos lá estamos quase acabando de resolver a nossa expressão numérica, está faltando apenas a última ordem resolvemos adição e a subtração como já foi dito na teoria você escolhe qual quer resolver primeiro , ou se quiser resolver as duas juntas também não tem problema nenhum no nosso caso vamos resolver primeiro a adição  e abaixar nossa expressão numérica :</big></p>
+          <p><big>
+          4 + 176 - 12
+          <br>180 - 12
+          <br>= 168
+          </big></p>
+          <p><big>
+          Viu como é simples depois de conciliar a teoria e a prática fica tudo muito mais fácil .</big></p>
+          
+         
+          
+                
+         
+    
+    </main>
+  </div>
+  </div>
+
+ 
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
+    integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
+    integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha"
+    crossorigin="anonymous"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+
+</html>
