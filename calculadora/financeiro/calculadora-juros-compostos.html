@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  </script>
+    <meta charset="utf-8" />
+    <title>Calculadora de juros compostos online .</title>
+    <meta name="keywords"
+      content="calculadora juros compostos online ,calculadora juros compostos,calculadora de juros ">
+    <meta name="description"
+      content= "Calcule os juros compostos de forma fácil , com nossa calculadora de juros compostos online  .">
+    <meta name="author" content="Equations">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">         
+      <link rel="stylesheet" type="text/css" href="../css/calculadora-juros-compostos.css" />
+      <link rel="stylesheet" type="text/css" href="../css/calcc.css" />
+      <link rel="stylesheet" type="text/css" href="../css/calccc.css" />
+      
+      <link rel="stylesheet" type="text/css" href="../css/navbar.css" />
+      <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
+  <!-- Bootstrap core CSS -->
+  <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">  
+  
+  </head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4  ">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../../index.html">Equations</a>
+       
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item active">
+              <a class="nav-link" aria-current="page" href="../../index.html">Home</a>
+            </li>
+
+          </ul>
+        </div>
+        <form class="d-flex">
+          <script>
+            var href;
+            function myfunction(){
+            $('form').on('submit', function(e) {
+              e.preventDefault();
+              href = $('datalist option[value="' +$('input[list="categorias"]').val()+ '"]').find('a').prop('href');
+              if(typeof href !== 'undefined')
+                window.location.href = href;
+              });
+            }
+            </script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+             
+     <input list="categorias" type="text" class="form-control me-2" oninput="myfunction()" placeholder="Search" >
+     <datalist id="categorias">
+
+     
+      <option value="home"><a href="../../index.html"></a></option>
+      <option value="calculadora de expressões"><a href="../../calculadora.html"></a></option>
+      <option value="calculadora cientifica"><a href="../../calculadoracientifica.html"></a></option>
+      <option value="conversor"><a href="../../conversor.html"></a></option>
+      
+      </datalist>
+      
+      
+        <button class="btn btn-outline-success" value="Procurar" id="categorias" type="submit">Search</button>
+         </form>        </div>
+      </div>
+    </nav>   
+  <div class="container">
+        <section class="content">
+          <h2>
+            <div class="header">Calculadora de Juros Compostos</div>
+          </h2>
+          
+            <form onsubmit="return false">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="control-label">Aporte Inicial:</label>
+                        <input class="montante form-control" type="number" placeholder="Valor inicial">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="control-label">Aporte Mensal:</label>
+                        <input class="aporte form-control" type="number" placeholder="Senão, vazio">
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <legend>Taxa</legend>
+                    <div class="col-md-6">
+                        <label class="control-label">Mensal</label>
+                        <input class="taxa form-control" type="number" placeholder="Taxa de juros">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="control-label"> taxa anual</label>
+                        <input class="taxaAno form-control" type="number" placeholder="Senão, vazio">
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <legend>Prazo</legend>
+                    <div class="col-md-4">
+                        <label class="control-label">Em meses</label>
+                        <input class="prazo form-control" type="number" placeholder="Meses">
+                    </div>
+                    <div class="col-md-4">
+                        <label> em anos</label>
+                        <input class="prazoAno dataput form-control" type="number" placeholder="Senão, vazio">
+                    </div>
+                    <div class="col-md-4">
+                        <label> data específica</label>
+                        <input class="ateVencer dataput form-control" type="date" placeholder="Data do Vencimento">
+                    </div>
+                </div>
+                <hr>
+                
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <input type="submit" class="btn btn-primary btn-block btn-lg simulaUm" value="Calcular">
+                    </div>
+                </div>
+            </form>
+            <hr>
+            <div class="row resultados">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover table-striped table-dark">
+                        <thead>
+                            <tr>
+                                <th>Aplicação inicial</th>
+                                <th>Soma Aplicações</th>
+                                <th>Juros totais</th>
+                                <th>Acumulado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>R$ <span class="apIn">.</span></td>
+                                <td>R$ <span class="apOut">.</span></td>
+                                <td>R$ <span class="apJu">.</span></td>
+                                <td>R$ <span class="apTot">.</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+        </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="jur.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  
+    <meta charset="utf-8" />
+    <title>Calculadora de desconto .</title>
+    <meta name="keywords"
+      content="calculadora de desconto,calculadora de desconto online">
+    <meta name="description"
+      content=" Calcule o desconto de forma fácil e rápida com nossa calculadora de desconto .">
+    <meta name="author" content="Equations">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+    <link rel="stylesheet" type="text/css" href="../css/calculadora-de-desconto.css" />
+    <link rel="stylesheet" type="text/css" href="../css/calcc.css" />
+
+    <link rel="stylesheet" type="text/css" href="../css/calccc.css" />
+    <link rel="stylesheet" type="text/css" href="../css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="../css/calculadora-de-desconto.css" />
+
+  
+    <!-- Bootstrap core CSS -->
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4  ">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../../index.html">Equations</a>
+       
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item active">
+              <a class="nav-link" aria-current="page" href="../../index.html">Home</a>
+            </li>
+
+          </ul>
+        </div>
+        <form class="d-flex">
+          <script>
+            var href;
+            function myfunction(){
+            $('form').on('submit', function(e) {
+              e.preventDefault();
+              href = $('datalist option[value="' +$('input[list="categorias"]').val()+ '"]').find('a').prop('href');
+              if(typeof href !== 'undefined')
+                window.location.href = href;
+              });
+            }
+            </script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+             
+     <input list="categorias" type="text" class="form-control me-2" oninput="myfunction()" placeholder="Search" >
+     <datalist id="categorias">
+
+     
+      <option value="home"><a href="../../index.html"></a></option>
+      <option value="calculadora de expressões"><a href="../../calculadora.html"></a></option>
+      <option value="calculadora cientifica"><a href="../../calculadoracientifica.html"></a></option>
+      <option value="conversor"><a href="../../conversor.html"></a></option>
+      
+      </datalist>
+      
+      
+        <button class="btn btn-outline-success" value="Procurar" id="categorias" type="submit">Search</button>
+         </form>        </div>
+      </div>
+    </nav>  
+      
+      
+      <link rel='stylesheet' href='posts1.css' type='text/css' media='all' />
+      <link rel='stylesheet' href='post2.css' type='text/css' media='all' />
+      
+      </style>
+      </head>
+      
+      <div class="wrap">
+        
+      <article class="blglst">
+          <div class="wrap">
+  
+        <article class="blglst">
+          <h2>
+            <div class="heade">Calculadora de desconto</div>
+          </h2>
+          
+          <br>
+  
+<p><h3>desconto com números reais </h3></p>
+    <input type="text" placeholder=" valor atual " class="global" name="nome5" id="bas">
+    <input type="text" placeholder=" valor a descontar" class="global" name="nome8" id="alt">
+    
+    <input type="button" value="calcular" style="padding: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 3px;
+    float: left;
+    width:50%;
+    height:10 ;
+    margin: 0 2px;
+    /*border: 1px solid #000;*/
+    background-color: #81C784;" onclick="calcular1(); " >
+   <br>
+   <br>
+   <br>
+    <script> function calcular1() {
+        var base = document.getElementById('bas').value;
+        var expoente = document.getElementById('alt').value;
+        var msg = base - expoente  ;
+        document.getElementById('calc').value = msg;
+    }</script>
+    <p><h3>desconto com porcentagem</h3></p>
+   <input type="text" placeholder="valor atual " class="global" name="nome" id="base">
+    <input type="text" placeholder="porcentagem a descontar" class="global" name="nome1" id="altura">
+    
+    <input type="button" value="calcular" style="padding: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 3px;
+    float: left;
+    width:50%;
+    height:10 ;
+    margin: 0 2px;
+    /*border: 1px solid #000;*/
+    background-color: #81C784;" onclick="calcular(); " >
+   <br>
+   <br>
+   <br>
+   <input  type="text" class="result" value="resultado" name="ola" id="calc">
+    <script> function calcular() {
+        var base = document.getElementById('base').value;
+        var expoente = document.getElementById('altura').value;
+        exp = base * expoente / 100
+        var msg =  base -  exp   ;
+        document.getElementById('calc').value = msg;
+   }
+   
+    </script>
+    <p><h1>Calculadora de desconto .</h1></p>
+
+    <p><big>Com nossa calculadora de desconto você pode fazer cálculos de desconto de maneira extremamente fácil, você pode fazer cálculos de desconto com porcentagem, ou com números reais .</big></p>
+    
+    <p><h2>Como calcular desconto com números reais na nossa calculadora de desconto ?</h2></p>
+    
+    <p><big>Para calcular desconto com números reais na nossa calculadora, é extremamente fácil, pois nós temos os dois primeiros campos na calculadora, que são os campos em que você deve digitar primeiramente o valor Inicial, ou seja o valor do produto e depois o segundo número que é justamente o valor do desconto, ou seja o valor que você vai descontar do valor do seu produto .</big></p>
+    
+    <p><big>Na calculadora de desconto, você não deve digitar símbolos monetários junto com o número por exemplo : $40, você deve digitar os números normalmente, sem nenhum símbolo digitando apenas os números, como por exemplo : 40 .</big></p>
+    
+    <p><big>Por exemplo, nós temos um produto que custa $30 e vamos descontar dele $20 .</big></p>
+    
+    <p><big>Vamos ter que colocar o 30 no primeiro campo e depois pegar o desconto que é de 20 e colocar no segundo campo, feito isso é só você apertar no botão calcular, que a calculadora de desconto processará o resultado para você .</big></p>
+    
+    <p><big>Você deve tomar cuidado, para não colocar porcentagem no campo de desconto dos números reais, vamos ver como nós podemos fazer o desconto com  porcentagem na nossa calculadora de desconto :</big></p>
+    
+    <p><h2>Como calcular desconto com porcentagem na calculadora de desconto ?</h2></p>
+    
+    <p><big>Para calcular o desconto com porcentagem na calculadora, é muito simples, você apenas deve digitar no primeiro campo da nossa calculadora o valor do produto, novamente o valor do produto vai ter que ser digitado em números reais, sem nenhum símbolo junto e depois disso é só você colocar o valor do desconto em porcentagem no segundo campo , sem o %, mas apesar de você ter digitado o valor da porcentagem sem o % a calculadora processará aquele número como se fosse uma porcentagem .</big></p>
+    
+    <p><big>Você só deve tomar cuidado para não inverter os campos e por exemplo, tentar calcular o desconto com números reais no campo da porcentagem, ou um desconto com porcentagem no campo dos números reais, caso contrário a calculadora vai te dar um resultado correto e você não vai precisar se preocupar com cálculos de desconto .</big></p>
+    
+    <p><h2>Como calcular o desconto ?</h2></p>
+    
+    <p><big>Apesar de que a nossa calculadora de desconto pode calcular o desconto para você, é extremamente importante que você também saiba  calcular o desconto, sem a calculadora, aí a calculadora pode ser uma ferramenta excelente para ver se seus cálculos de desconto estão corretos, virando muito mais uma ferramenta de aprendizagem do que necessariamente uma ferramenta de trabalho .</big></p>
+    
+    <p><big>O cálculo de desconto é um cálculo extremamente importante, que nós começamos a ter algumas noções básicas a partir do 3º ou 4º ano do ensino fundamental e é um cálculo que nós vamos usar pela nossa vida inteira, é extremamente importante que você saiba calcular o desconto, porque se você não souber calcular desconto, você vai ter muitos problemas relacionados às suas compras e outras atividades do dia a dia que envolvam dinheiro, sabendo calcular o desconto, você vai poder saber de quanto vai ser o valor a ser descontado em um produto e outras informações como por exemplo qual era o valor original do produto, qual é o valor que o produto vai ter com o desconto e diversas outras coisas, agora vamos ver um pouco mais de como funciona o cálculo de desconto :</big></p>
+    
+    
+    <p><big>Como na nossa calculadora, existem dois tipos de desconto, um é o desconto com números reais, ou seja o desconto com números normais e também temos o desconto com porcentagem, que é um pouquinho mais complexo, porque você vai ter que ter uma noção de outro cálculo básico que é o cálculo de porcentagem , por isso nós vamos ver primeiramente o desconto com números reais, para você ter uma noção básica e depois vamos partir para o desconto com porcentagem que é um pouco mais complexo, vamos lá :</big></p>
+    
+    <p><h2>Desconto com números reais na teoria :</h2></p>
+    
+    <p><big>No cálculo de desconto nós vamos ter duas variáveis, sendo uma variável que representa o valor do produto, ou seja o valor original e outra variável que é o valor do desconto, ou seja o valor que vai ser descontado do valor do produto original .</big></p>
+    
+    <p><big>Este termo variável, é um termo para um valor Indefinido, que vamos ter que descobrir tirando os dados do exercício, por exemplo a variável do valor original, vai ser o valor do produto e a variável do valor do desconto, vai ser o valor do desconto, então você deve primeiramente analisar seu exercício e coletar esses dois dados, o valor do produto e também o valor do desconto, sempre prestando muita atenção no enunciado do exercício é claro, porque o exercício pode estar pedindo para você calcular o valor do desconto e depois fazer por exemplo uma subtração para descobrir quanto vai ficar o valor do produto, mais é aí que você deve tomar cuidado, porque o exercício pode pedir também quanto vai ficar o valor do desconto  .</big></p>
+    
+    <p><big>Mais o cálculo de desconto com números reais é extremamente fácil e você não deve se preocupar muito porque normalmente, o exercício vai pedir apenas o valor do produto com o desconto  .</big></p>
+    
+    <p><big>Depois que nós sabemos o valor das variáveis , que são o valor do produto e também o valor do desconto , nós vamos ter que subtrair o valor do produto pelo valor do desconto, então a subtração vai ser feita calculando o valor do produto menos o valor do desconto .</big></p>
+    
+    <p><big>Você só deve tomar cuidado para não inverter a ordem, se você subtrair o valor do desconto pelo valor do produto, o resultado provavelmente vai ficar errado então tenha muito cuidado com esse quesito .</big></p>
+    
+    <p><h2>Números negativos .</h2></p>
+    
+    <p><big>Os números negativos são extremamente comuns de caírem no meio dos cálculos de desconto, principalmente se estes cálculos de desconto estiverem envolvendo dinheiro .</big></p>
+    
+    <p><big>Isso acontece quando por exemplo um cliente vai na loja e compra um produto parcelado, aí ele vai ter um valor negativo ou seja uma dívida,  porque ele não pagou esse produto, então ele vai estar devendo, consequentemente se a dívida for maior que o valor que ele tem, este valor vai ser um valor negativo, os valores negativos são sempre representados pelo símbolo do -, que vem sempre antes dos números por exemplo: - 66 .</big></p>
+    
+    <p><h2>Números decimais e inteiros .</h2></p>
+    
+    <p><big>Os números decimais e os números inteiros, vão cair no meio dos cálculos de desconto e você vai ter que entendê los bem, porque por exemplo muitas vezes você vai ter que descontar um valor decimal de um número inteiro, ou um valor inteiro de um número decimal, você deve sempre prestar muita atenção nisso, para não errar nos cálculos de subtração que vão envolver o valor do produto e o valor do desconto, pode acontecer que ou o valor do produto, ou o valor do desconto sejam decimais e um deles sejam inteiros .</big></p>
+    
+    <p><big>Um número inteiro é por exemplo o número 6, já os números decimais são os números que tem vírgulas por exemplo o número 6,6, o número 6,666, ou o número 6,9, esses números são números decimais .</big></p>
+    
+    <p><big>Nos números decimais nós temos a parte inteira que pode ser um número negativo, pode ser zero ou um número positivo, mas também temos a parte decimal que é a parte que vem depois da vírgula, as partes decimais podem ser infinitas mas nos cálculos de desconto, normalmente eles vão ter apenas duas ou três casas decimais, no máximo .</big></p>
+    
+    <p><big>Agora que nós conseguimos entender pelo menos a base do cálculo de desconto, que é o valor do produto subtraído pelo valor do desconto, vamos para um exercício, para que você consiga entender um pouco melhor na prática, porque na teoria tudo é um pouco difícil  quando nós vamos aprender alguma coisa nova, já na prática tudo vai ficar mais fácil, se você conseguiu entender pelo menos um pouco da teoria vai ficar extremamente fácil conciliar a teoria e a prática para aprender como calcular desconto .</big></p>
+    
+    <p><h2>Desconto com números reais na prática, com exercício :</h2></p>
+    
+    <p><big>1) Uma loja estava anunciando a promoção de algumas calças e essas calças estavam no valor de $80 e o desconto era um desconto de $7,5, um cliente levou duas calças, agora calcule qual o valor do produto com o desconto e qual o valor que o cliente vai ter que pagar a loja :</big></p>
+    
+    <p><big>Aqui nós temos um exercício  com várias variáveis, nós temos o valor do produto que tem o valor de $80 e também o valor do desconto que é de $7,5 o resto do exercício, você deve deixar para resolver depois, porque você deve ir resolvendo o exercício por partes, para ficar mais fácil .</big></p>
+    
+    <p><big>Aqui nós vamos ter o desconto de um valor real por um valor decimal, esse 5 equivale a ½ de $1, então é só fazer a subtração primeiramente dos valores reais esquecendo o 5 .</big></p>
+    
+    <p><big>80 - 7 = 73</big></p>
+    
+    <p><big>E depois subtrair 0,5 do resultado dessa subtração, entre esses números reais .</big></p>
+    
+    <p><big>73 - 0,5 = 72,5</big></p>
+    
+    <p><big>Agora nós já temos o valor do produto com o desconto, mais como o cliente levou duas calças, nós apenas vamos ter que multiplicar o valor do produto com o valor do desconto, que vai ser 72,5 por 2 .</big></p>
+    
+    <p><big> 72,5 ◎ 2 = 145</big></p>
+    
+    <p><big>Portanto o valor do produto com o desconto vai ser de $75,5 e o valor que o cliente deve pagar a loja vai ser de $145 .</big></p>
+    
+    
+    <p><h2>Desconto com porcentagem na teoria :</h2></p>
+    
+    <p><big>Agora que nós aprendemos como calcular o desconto com números reais, nós já temos uma noção básica do cálculo de desconto, mais uma coisa muito comum de ocorrer, é ocorrer o cálculo de desconto com porcentagem, onde nós temos o valor inicial do produto e temos um valor em forma de porcentagem a ser descontado .</big></p>
+    
+    <p><big>O valor da porcentagem é o padrão para representar o desconto que um produto vai receber, por isso é tão usado , o valor máximo que nós podemos ter na porcentagem é de 100%, mais nós nunca teremos 100% de desconto, porque aí o produto sairia de graça, então nós sempre vamos ter um número com um desconto menor que 100%, ou seja sempre vamos ter que descontar algum valor do produto e o valor que vai sobrar dessa subtração do valor do produto pelo valor da porcentagem, vai ser o valor do desconto, o resultado do valor do produto pelo valor da porcentagem vai ser um número real, ou seja um número que não está em forma de porcentagem .</big></p>
+    
+    <p><big>Então para nós conseguimos resolver um exercício que tem um número que está em forma de porcentagem, nós vamos precisar saber calcular porcentagem, vamos entender um pouco mais sobre este cálculo tão importante :</big></p>
+    
+    
+    
+    <p><h3>Como calcular porcentagem :</h3></p>
+    
+    <p><big>O cálculo de porcentagem é outro cálculo da matemática básica, que é extremamente importante nos cálculos de desconto , nós começamos a aprender ele, desde o quarto ano do ensino fundamental, mais vamos tendo diversas revisões até o final do 6º ano do ensino fundamental, mais ou menos a partir dali, você já vai precisar ter um domínio completo do cálculo de porcentagem, porque ele é um cálculo extremamente básico e fácil de ser calculado .</big></p>
+    
+    <p><big>No Brasil 50% das pessoas, não sabem calcular porcentagem e são números extremamente alarmantes, porque a porcentagem é um dos cálculos mais importantes da matemática .</big></p>
+    
+    <p><big>Para fazer o cálculo de porcentagem você tem que pegar o valor do produto e multiplicar pelo valor da porcentagem, esquecendo o símbolo de %, pense que o valor da porcentagem é um número real e apenas multiplique o valor do produto por ele, por exemplo se o valor do produto for : $100 e o valor do desconto for de 75%, você vai ter que fazer 100 multiplicado por 75 .</big></p>
+    
+    <p><big>Depois de efetuar corretamente o cálculo de multiplicação, nós apenas vamos ter que dividir o resultado da multiplicação por 100 e este vai ser o valor que nós devemos descontar do produto .</big></p>
+    
+    <p><big>Feito isso, é só pegar o valor do produto e o valor que obtemos do cálculo de porcentagem e subtraí-los, que assim teremos, o valor do produto com o valor do desconto .</big></p>
+    
+    <p><big>Mais uma vez, vamos ver um exemplo prático, para nós conseguirmos entender melhor como funciona o cálculo de desconto com porcentagem .</big></p>
+    
+    <p><h3>Desconto com porcentagem na prática :</h3></p>
+    
+    <p><big>Uma televisão custava $700 na loja e ela estava em promoção recebendo um desconto de 25% .</big></p>
+    
+    <p><big>Então nesse exercício nós vamos ter que multiplicar o 700 por 25 :</big></p>
+    
+    <p><big>700 ◎ 25 = 17.500</big></p>
+    
+    <p><big>E depois vamos ter que dividir o valor da etapa anterior por 100 :</big></p>
+    
+    <p><big>17.500 / 100 = 175 </big></p>
+    
+    <p><big>Uma dica para ficar mais fácil na divisão por 100, é você apenas eliminar dois zeros do número que você multiplicou anteriormente , que você terá o resultado da divisão e não precisará fazer nenhuma conta de divisão para obter o resultado , esses macetes ajudam muito, para você conseguir obter resultados corretos de forma mais fácil .</big></p>
+    
+    <p><big>Depois que você achou o valor do desconto, é só você subtrair com o valor do produto, que você terá o resultado do seu exercício :</big></p>
+    
+    <p><big>700 - 175 = 525</big></p>
+    
+    <p><h3>Desconto com regra de 3 :</h3></p>
+    
+    <p><big>O desconto com a subtração não é a única forma de você obter o resultado correto, uma outra opção para o cálculo de desconto é você calcular o desconto por meio da regra de três :</big></p>
+    
+    <p><big>O cálculo da regra de três é um cálculo muito importante que nós começamos aprender desde o 6º ano do ensino fundamental, ele vai ser um pouco mais aprofundado no sétimo ano do ensino fundamental e existem dois tipos de regra de três, temos a regra de três simples e a regra de três composta .</big></p>
+    
+    <p><h2>Qual a diferença entre a regra de três simples e a composta no cálculo de desconto ?</h2></p>
+    
+    <p><big>A diferença é justamente a complexidade a regra de três simples, pode envolver dois valores, mais tem apenas uma incógnita e a regra de três composta, normalmente tem mais de uma incógnita e é bem mais complexa, se nós temos um exercício extremamente complexo com diversas variáveis vamos ter que usar a regra de três composta, mas já se temos um exercício mais simples com uma variável nós vamos ter que usar a regra de três simples .</big></p>
+    
+    <p><big>No cálculo de desconto nós dizemos que temos duas variáveis : o valor do produto e o valor do desconto, mas como nós já temos o valor do produto e o valor do desconto, nós apenas colocamos na regra de três uma incógnita  que vai ser o valor que nós temos que descobrir, ou seja o valor do desconto .</big></p>
+    
+    <p><big>Mas antes de nós entendermos um pouco mais sobre como calcular o desconto com a regra de três, primeiramente temos que entender a lógica e um pouco por trás da fórmula da regra de três .</big></p>
+    
+    <p><h2>Como calcular a regra de três ?</h2></p>
+    
+    <p><big>Para calcular a regra de três nós temos que analisar as grandezas e ver se elas estão diretamente ou inversamente proporcionais, vamos entender um pouco melhor isso de forma mais simples :</big></p>
+    <p><big>
+    As grandezas são diretamente proporcionais quando com o aumento ou a diminuição da primeira grandeza ela fique igual à segunda grandeza, com isso ela vai ficar diretamente proporcional .</big></p>
+    
+    <p><big>
+    Já quando uma dessas grandezas com o aumento ou a diminuição de uma delas, sofre uma alteração contrária, mas ao mesmo tempo e na mesma proporção, ela vai ser indiretamente proporcional.</big></p>
+    
+    <p><big>Depois que nós identificamos se a grandeza é diretamente ou inversamente proporcional, nós vamos ter que montar uma tabela para posteriormente poder resolver essa regra de três .</big></p>
+    
+    <p><h2>Para ficar mais fácil de entender, vamos te dar um exemplo simples  :</h2></p>
+    
+    <p><big>Supomos, que em uma cidade precisava se contratar 1 funcionário, a cada 500 habitantes e a cidade tinha 17.500 habitantes, como fazemos para descobrir por meio da regra de três , quantos funcionários seriam contratados  .</big></p>
+    
+    <p><big>Para resolver esse exercício é extremamente simples, nós vamos ter que primeiramente, colocar a quantidade de funcionários na primeira linha e depois a quantidade de habitantes e de pessoas na segunda linha .</big></p>
+    
+    <p><big>     1 ---  500
+    <br>     X --- 17.500</big></p>
+    
+    <p><big>Depois que nós conseguimos montar essa tabela, nós vamos ter que identificar que ela é diretamente proporcional, porque é uma pessoa a cada 500 habitantes , e se a quantidade de pessoas aumentar, a quantidade de habitantes também vai ter que aumentar, por isso esse cálculo vai ser ser diretamente proporcional, montando a equação :</big></p>
+    
+    <p><big>1/X = 500/17.500 = 35 </big></p>
+    
+    <p><big>Portanto, como é diretamente proporcional, nós apenas vamos ter que dividir a quantidade de habitantes, pela quantidade de pessoas, dando 35 funcionários que a cidade vai ter que contratar . </big></p>
+    
+    <p><big>Viu como é fácil, agora nós vamos ter que aplicar a regra de três para fazer o cálculo de desconto :</big></p>
+    
+    <p><h2>Como calcular desconto, por meio da regra de três :</h2></p>
+    
+    <p><big>Agora que nós aprendemos como calcular a regra de três, vai ficar muito mais fácil entendermos como calcular o desconto pela regra de três, nós vamos te dar um exemplo com o desconto por porcentagem, que é o método mais comum e padrão digamos assim .</big></p>
+    
+    <p><big>No desconto por porcentagem nós temos três valores, um é o valor do produto, o outro é o 100, que significa 100% e o outro é o valor da porcentagem, lembra do exemplo de pessoas por população, esse 100%, também é como se fosse o total de habitantes da cidade, porque o 100% ele vai ser o valor total, que nós usamos como base, para descobrir quanto equivale a outra porcentagem .</big></p>
+    
+    <p><big>Agora que entendemos a base da teoria, vamos te explicar como funciona o cálculo de desconto com regra de três em um exercício para você conseguir entender melhor :</big></p>
+    
+    <p><big>Um produto custava $500 e teve um desconto de 15%, calcule quanto vai custar o produto com o desconto .</big></p>
+    
+    <p><big>Primeiramente nós vamos ter que, montar uma tabela com o produto, 15% e o 100%, vamos lá :</big></p>
+    
+    <p><big>500 --- 100
+    <br>X  ------ 15</big></p>
+    
+    <p><big>Pronto, agora nós vamos ter que multiplicar o 15, por 100 e depois dividir isso por 500, vamos ver como vai ficar a sentença matemática :</big></p>
+    
+    <p><big> X = 500 ◎ 15 / 100 = 75</big></p>
+    
+    <p><big>Agora, através do cálculo de regra de três nós obtemos o valor do desconto, portanto nós só temos que subtrair do valor do produto o 75, que nós vamos terminar o cálculo de desconto .</big></p>
+    
+    <p><big>500 - 75 = 425</big></p>
+    
+    <p><big>Perceba que quando nós precisamos calcular o desconto nós usamos a subtração, se nós um dia precisarmos calcular o aumento, já fica uma dica aqui, é só você somar em vez de subtrair .</big></p>
+    
+    <p><h2>Como fazer cálculos de desconto um pouco mais complexos, com equações de primeiro grau .</h2></p>
+    
+    <p><big>Até agora nós apenas estudemos cálculos de descontos simples, mas nós podemos ter alguns cálculos bem complexos que não podemos resolver com o método de resolução normal, aí nós teremos que aplicar as equações de primeiro grau :</big></p>
+    
+    <p><big>As equações de primeiro grau, são conteúdos que começam a ser estudados no sétimo ano do ensino fundamental e já não são da matemática básica, eles já começam a envolver um pouco de álgebra e é um cálculo que não é tão fácil por que exige um pouco de raciocínio lógico, mas por outro lado, você pode resolver quase tudo com as equações do primeiro grau e o que você não consegue resolver com uma equação do primeiro grau, você consegue resolver com as do segundo, ou com algum outro tipo de equação .</big></p>
+    
+    <p><big>Para calcular o desconto por meio da equação de primeiro grau você deve primeiramente montar a equação, sempre tendo na equação uma igualdade e também uma incógnita, logo vamos explicar o que é isso não se preocupe, depois de montada a equação, você deve isolar a incógnita de um lado do igual, essa incógnita vai ser o x, ou alguma outra letra que esteja representando uma incógnita, depois que nós isolamos o x de algum lado do sinal de =, nós vamos ter que trocar o sinal,  se você inverteu a incógnita, sempre deve trocar o sinal, a soma vai ser uma subtração, a subtração vai ser uma soma, a divisão vai ser uma multiplicação e assim por diante .</big></p>
+    
+    <p><big> Depois disso, você apenas deve você resolver o que está do outro lado do =, como se fosse uma expressão numérica, resolvendo primeiro o que está dentro dos parênteses, depois o que está dentro dos colchetes, depois o que está dentro da chaves, depois as operações com multiplicação e divisão e depois a adição e a subtração .</big></p>
+    
+    <p><big>Logo você terá o resultado da sua equação de primeiro grau, vamos te dar um exemplo para você conseguir entender melhor : </big></p>
+    
+    <p><big>1) Um estabelecimento precisava pagar uma conta e para pagar essa conta, ele precisava de mais r$500, mas ele teve um desconto nessa dívida de r$200, depois de conseguir vender 10 televisores ele conseguio pagar a dívida, quanto o estabelecimento lucrou com cada televisor ?</big></p>
+    
+    <p><big>Aqui nós temos um cálculo de desconto de r$200 em cima de r$500, e mais quanto custava cada televisor, apesar de ser um exercício um pouco complexo, com a equação de primeiro grau é extremamente fácil resolver um cálculo tão complexo como esse envolvendo desconto .</big></p>
+    
+    <p><big>Primeiramente nós temos 10 televisores que não sabemos o valor, então vamos colocar o x do lado do 10, porque não sabemos quanto custa cada  televisor :</big></p>
+    
+    <p><big>10x =</big></p>
+    
+    <p><big>Aí nós temos o valor que o estabelecimento devia que era de $500 e  o desconto de $200, então precisamos adicionar isso também a nossa equação de primeiro grau, vamos ver como vai ficar .</big></p>
+    
+    <p><big>10x = 500 - 200</big></p>
+    
+    
+    <p><big>10x = 300</big></p>
+    
+    <p><big>Agora é só isolar o x e depois fazer a divisão, sempre quando temos uma letra e um número juntos, existe uma multiplicação entre a letra e o número e como vamos inverter a incógnita de outro lado do igual, nós também devemos inverter o sinal, que no nosso caso é de uma multiplicação para uma divisão .</big></p>
+    
+    <p><big>X = 300 / 10</big></p>
+          
+    
+    <p><big>O certo é sempre representar em uma fração a divisão para ficar mais fácil, porque uma fração ela serve para simplificar uma divisão do numerador pelo denominador, então para resolver essa fração, é só dividir o numerador pelo denominador que você vai ter o resultado da equação :</big></p>
+    
+    <p><big>X = 30</big></p>
+    
+    
+    <p><big>Viu como é simples , existem vários e vários métodos para resolver um cálculo de desconto, você pode resolver apenas por meio da subtração, você pode resolver por meio da regra de três, você pode resolver por meio da equação de primeiro grau, em exemplos um pouco mais complexos com a equação de segundo grau, mais todos os méodos que você usar para resolver, vão estar corretos, em alguns casos o método da equação de primeiro grau vai ser um pouco mais fácil de resolver, em alguns casos o da subtração vai ser um pouco mais fácil de resolver, aí é você quem escolhe qual o método que você vai escolher para resolver o cálculo de desconto .</big></p>
+    
+    
+    <p><big>Sempre que você precisar você pode usar nossa calculadora de desconto, você pode usá-la para descobrir se os seus cálculos de desconto estão corretos, ou mesmo para descobrir o valor do desconto, apesar de que a nossa calculadora está aqui para te ajudar é extremamente importante que você aprenda a calcular o desconto, porque sem dúvida é um dos cálculos mais importantes da sua vida e se você não aprender a calcular o desconto dificilmente vai passar em vestibulares, enem ou coisa do tipo, porque além do cálculo de desconto ser um cálculo extremamente importante, ele também é um cálculo extremamente fácil, pois nós temos diversas maneiras de calcular o desconto, usando cálculos extremamente simples, então se precisar leia e releia esse texto, até conseguir entender bem como calcular o desconto .</big></p>
+    
+    
+           </body>
+          <div class="wrap">
+          
+            <article class="blglst">
+    
+    
+
+     
+</html>

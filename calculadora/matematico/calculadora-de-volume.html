@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  
+    <meta charset="utf-8" />
+    <title>Calculadora de volume  - e  volume em litros .</title>
+    <meta name="keywords"
+      content="calculadora de volume ,calculadora de volume em litros">
+    <meta name="description"
+      content=" Calcule qualquer volume com nossa calculadora de volume e converta volume em litros com nossa calculadora de volume em litros .">
+    <meta name="author" content="Equations">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+    <link rel="stylesheet" type="text/css" href="../css/calculadora-de-volume.css" />
+    <link rel="stylesheet" type="text/css" href="../css/calcc.css" />
+    <link rel="stylesheet" type="text/css" href="../css/calccc.css" />
+    
+    <link rel="stylesheet" type="text/css" href="../css/navbar.css" />
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
+    <!-- Bootstrap core CSS -->
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4  ">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../../index.html">Equations</a>
+       
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item active">
+              <a class="nav-link" aria-current="page" href="../../index.html">Home</a>
+            </li>
+
+          </ul>
+        </div>
+        <form class="d-flex">
+          <script>
+            var href;
+            function myfunction(){
+            $('form').on('submit', function(e) {
+              e.preventDefault();
+              href = $('datalist option[value="' +$('input[list="categorias"]').val()+ '"]').find('a').prop('href');
+              if(typeof href !== 'undefined')
+                window.location.href = href;
+              });
+            }
+            </script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+             
+     <input list="categorias" type="text" class="form-control me-2" oninput="myfunction()" placeholder="Search" >
+     <datalist id="categorias">
+
+     
+      <option value="home"><a href="../../index.html"></a></option>
+      <option value="calculadora de expressões"><a href="../../calculadora.html"></a></option>
+      <option value="calculadora cientifica"><a href="../../calculadoracientifica.html"></a></option>
+      <option value="conversor"><a href="../../conversor.html"></a></option>
+      
+      </datalist>
+      
+      
+        <button class="btn btn-outline-success" value="Procurar" id="categorias" type="submit">Search</button>
+         </form>        </div>
+      </div>
+    </nav>  
+      
+      
+      <link rel='stylesheet' href='posts1.css' type='text/css' media='all' />
+      <link rel='stylesheet' href='post2.css' type='text/css' media='all' />
+      
+      </style>
+      </head>
+      
+      <div class="wrap">
+        
+      <article class="blglst">
+          <div class="wrap">
+  
+        <article class="blglst">
+          <h2>
+            <div class="heade">Calculadora de volume</div>
+          </h2>
+          
+          <br>
+  
+          <input type="text" placeholder="altura" class="global" name="nome" id="a">
+      <input type="text" placeholder="largura" class="global" name="nome1" id="b">
+      <input type="text" placeholder="comprimento" class="global" name="nome1" id="c">
+      
+      <input type="button" value="calcular" style="padding: 15px;
+      font-weight: bold;
+      font-size: 16px;
+      border: none;
+      border-radius: 3px;
+      float: left;
+      width:25%;
+      height:10 ;
+      margin: 0 2px;
+      /*border: 1px solid #000;*/
+      background-color: #81C784;" onclick="calcular(); " >
+     <br>
+     <br>
+     <br>
+     
+      <input type="text" class="resuut"  value="valor do volume" name="ola" id="calc" >
+  
+     <script> function calcular() {
+          var a = document.getElementById('a').value;
+          var b = document.getElementById('b').value;
+          var c = document.getElementById('c').value;
+          var msg ="o valor do volume é de " +  a*b*c ;
+          document.getElementById('calc').value = msg;
+     }
+      </script>
+            </body>
+          <div class="wrap">
+          
+            <article class="blglst">
+    
+
+     
+</html>
